@@ -10,14 +10,14 @@
 
 ## Installation
 
-Ensure you have Go installed on your system (Go 1.15 or higher recommended) before using this tool.
+Ensure you have Go installed on your system (Go 1.22 or higher recommended) before using this tool.
 
 ### Installing from Source
 
 Follow these steps to install the project locally:
 
 ```bash
-git clone https://github.com/yourusername/gopass.git
+git clone https://github.com/mkdemir/gopass.git
 cd gopass
 go build -o gopass
 ```
