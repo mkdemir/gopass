@@ -3,13 +3,18 @@ package password
 import (
 	"crypto/rand"
 	"math/big"
+	"strings"
 )
 
-func GeneratePassword(length int, digits, symbols bool) (string, error) {
+func GeneratePassword(length int, digits, symbols, upper bool) (string, error) {
 	var passwordRunes []rune
-	letterRunes := []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+	letterRunes := []rune("abcdefghijklmnopqrstuvwxyz")
 	digitRunes := []rune("0123456789")
 	symbolRunes := []rune("!@#$%^&*()-_=+[]{};:,.<>?")
+
+	if upper {
+		letterRunes = append(letterRunes, []rune(strings.ToUpper(string(letterRunes)))...)
+	}
 
 	if digits {
 		passwordRunes = append(passwordRunes, digitRunes...)
