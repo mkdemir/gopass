@@ -1,6 +1,6 @@
 package main
 
-import "gopass/cmd"
+import "github.com/mkdemir/gopass/cmd"
 
 func main() {
 	cmd.Execute()

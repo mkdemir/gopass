@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"gopass/pkg/password"
+	"github.com/mkdemir/gopass/pkg/password"
 
 	"github.com/spf13/cobra"
 )
